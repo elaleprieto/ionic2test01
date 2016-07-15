@@ -17,7 +17,9 @@ export class HomePage {
 	}
 
 	about() {
-		this.navController.push(AboutPage);
+		this.navController.push(AboutPage, {
+			nombre: 'Ale'
+		});
 	}
 
 	showAlert() {

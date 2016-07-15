@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 /*
   Generated class for the AboutPage page.
@@ -11,9 +11,10 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'build/pages/about/about.html',
 })
 export class AboutPage {
+  private nombre: string;
 
-  constructor(private nav: NavController) {
-
+  constructor(private nav: NavController, private navParams: NavParams) {
+    this.nombre = this.navParams.get('nombre');
   }
 
   pop() {

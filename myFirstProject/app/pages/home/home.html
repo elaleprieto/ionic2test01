@@ -1,14 +1,17 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic Test
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
+  <h1>Estamos en el año:</h1>
+  <h2>{{currentTime}}</h2>
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+    <button (click)="showPast()">Volver al Futuro!</button>
   </p>
+ <h1>Viajando a:</h1>
+  <h2>{{newTime}}</h2>
 </ion-content>

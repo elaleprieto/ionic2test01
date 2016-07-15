@@ -1,11 +1,35 @@
 import {Component} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, Alert} from 'ionic-angular';
 
 @Component({
   templateUrl: 'build/pages/home/home.html'
 })
 export class HomePage {
-  constructor(private navController: NavController) {
 
+  currentTime: number;
+  newTime: number;
+
+  constructor(private navController: NavController) {
+    this.currentTime = new Date().getFullYear();
+  }
+
+  showAlert() {
+    let prompt = Alert.create({
+      title: 'Alerta!',
+      message: 'Alerta creada!',
+      buttons: [{
+        text: 'Aceptar'
+      }]
+    });
+
+    this.navController.present(prompt);
+  }
+
+  showPast() {
+    this.newTime = this.getRandomInt(1000, 4000);
+  }
+
+  getRandomInt(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }

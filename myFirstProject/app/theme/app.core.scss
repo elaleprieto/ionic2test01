@@ -7,8 +7,9 @@
 // By default each design mode includes these shared imports.
 // App Shared Sass variables belong in app.variables.scss.
 
-@import "../pages/about/about.scss";
+@import "../pages/about/about";
 @import "../pages/home/home";
+@import "../pages/regiter/regiter";
 
 .button-center {
     margin: 0 auto;

@@ -1,7 +1,8 @@
-import {Component} from '@angular/core';
-import {NavController, Alert} from 'ionic-angular';
-import {DateAnnotation} from '../../pipes/mypipe';
-import {AboutPage} from '../about/about';
+import { Component } from '@angular/core';
+import { Alert, Modal, NavController } from 'ionic-angular';
+import { DateAnnotation } from '../../pipes/mypipe';
+import { AboutPage } from '../about/about';
+import { RegisterPage } from '../register/register';
 
 @Component({
 	templateUrl: 'build/pages/home/home.html',
@@ -9,8 +10,10 @@ import {AboutPage} from '../about/about';
 })
 export class HomePage {
 
+	apellido: string;
 	currentTime: number;
 	newTime: number;
+
 
 	constructor(private navController: NavController) {
 		this.currentTime = new Date().getFullYear();
@@ -20,6 +23,16 @@ export class HomePage {
 		this.navController.push(AboutPage, {
 			nombre: 'Ale'
 		});
+	}
+
+	register() {
+		let modalPage = Modal.create(RegisterPage);
+
+		modalPage.onDismiss(data => {
+			this.apellido = data.apellido;
+		});
+
+		this.navController.present(modalPage);
 	}
 
 	showAlert() {

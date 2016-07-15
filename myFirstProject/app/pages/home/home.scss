@@ -2,7 +2,12 @@
   
 }
 
-button {
+.unique {
     // width: 70%;
     width: $mfa-button-width * 1.2;
+}
+
+ion-input {
+    height: $mfa-input-height;
+    width: $mfa-input-width;
 }

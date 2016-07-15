@@ -4,7 +4,7 @@
 			Ionic Test
 		</ion-title>
 		<ion-buttons end>
-			<button>
+			<button (click)="about()">
 				<ion-icon name="search"></ion-icon>
 			</button>
 		</ion-buttons>
@@ -22,7 +22,7 @@
 	 </ion-item>
 	</ion-list>
 	<div class="button-center">
-		<button (click)="login()">Login</button>
+		<button (click)="login()" class="unique">Login</button>
 	</div>
 	<button fab fab-bottom fab-right>FAB</button>
 </ion-content>

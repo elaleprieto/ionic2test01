@@ -1,8 +1,10 @@
 import {Component} from '@angular/core';
 import {NavController, Alert} from 'ionic-angular';
+import {DateAnnotation} from '../../pipes/mypipe';
 
 @Component({
-  templateUrl: 'build/pages/home/home.html'
+  templateUrl: 'build/pages/home/home.html',
+  pipes: [DateAnnotation]
 })
 export class HomePage {
 
